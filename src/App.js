@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './NavBar';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Naitik Patel
-        </a>
-      </header>
+    <div>
+      <>
+      <NavBar/>
+      My name is  naitik patel i m going to create a notes app
+    </>
     </div>
   );
 }
