@@ -1,11 +1,11 @@
 import React from 'react'
-import {Navbar,Nav,Form,FormControl,Button,Container} from 'react-bootstrap'
+import {Navbar,Nav,Form,FormControl,Button,Container,NavLink} from 'react-bootstrap'
 
 function NavBar() {
     return (
        
         <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="primary" variant="dark" collapseOnSelect>
      <Container fluid>
     <Navbar.Brand href="#">Notes</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -34,11 +34,12 @@ function NavBar() {
       <Form className="d-flex">
         <FormControl
           type="search"
+          
           placeholder="Search"
           className="me-2"
           aria-label="Search"
         />
-        <Button variant="outline-success">Search</Button>
+        <Button variant="light">Search</Button>
       </Form>
     </Navbar.Collapse>
   </Container>
