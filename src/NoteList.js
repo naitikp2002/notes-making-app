@@ -6,7 +6,7 @@ function NoteList({notes, handleAddnote}) {
 
         <div>
             {notes.map((note)=>(
-            <Notes  id={note.id} text={note.text} date={note.date} />
+            <Notes  id={note.id} text={note.text} date={note.date} handleAddnote={ handleAddnote} />
             ))}  
             <Addnote  handleAddnote={ handleAddnote}/>          
         </div>

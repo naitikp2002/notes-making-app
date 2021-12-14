@@ -9,7 +9,7 @@ function Homepage() {
      {
        id: nanoid(),
        text: '',
-       date: 'dd/mm/yyyy'
+       date: 'Date'
      },
     ]);
     const addnote=(text)=>{

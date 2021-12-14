@@ -1,10 +1,10 @@
-import {React,useState} from 'react'
+import {React} from 'react'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import { Button } from 'react-bootstrap'
 
 
-function Notes({id,text,date}) {
+function Notes({id,text,date,handleAddnote}) {
     
     return (
         <div className='m-3'>
@@ -18,7 +18,7 @@ function Notes({id,text,date}) {
             </Form.Group>
             </Form>
             </Card.Text>
-            <Button variant="dark m-2"  >Add Note</Button>
+            <Button variant="dark m-2" onClick={handleAddnote} >Add Note</Button>
             <Button variant="dark me-3" >Delete</Button>
             </Card.Body>
             </Card>
