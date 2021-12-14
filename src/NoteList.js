@@ -1,14 +1,14 @@
 import React from 'react'
 import Notes from './Notes'
 
-function NoteList() {
+function NoteList({notes}) {
     return (
-        <div>
-            <Notes/>
-            <Notes/>
-            <Notes/>
-           
 
+        <div>
+            {notes.map((note)=>(
+            <Notes  id={note.id} text={note.text} date={note.date} />
+            ))}  
+            {/* <Notes/>          */}
         </div>
     )
 }
