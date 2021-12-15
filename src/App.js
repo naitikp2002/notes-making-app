@@ -1,27 +1,19 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './NavBar';
-import {
-  BrowserRouter as Router, Route,Routes
-} from "react-router-dom";
 
 import Homepage from './Homepage';
-import Contactpage from './Contactpage';
-import Aboutpage from './Aboutpage';
-function App() {
 
+function App() {
+  var rootStyle = {
+    backgroundColor : '#75DCD9',
+    color : 'black',
+    height: '100vh',
+   // min-height : '100vh'
+  }
   return (
-    <Router>
-    <div>
-      <NavBar/>
-      <Routes>
-         <Route exact path="/" element={<Homepage/>}/>
-         <Route exact path="/About" element={<Aboutpage/>}/>
-         <Route exact path="/Contact" element={<Contactpage/>}/>
-      </Routes>
-    
-    </div>
-    </Router>
+     <div style={rootStyle}>
+   <Homepage/>
+   </div>
   );
 }
 
