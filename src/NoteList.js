@@ -1,12 +1,12 @@
 import React from 'react'
 import Notes from './Notes'
 import Addnote from './Addnote'
-function NoteList({notes, handleAddnote}) {
+function NoteList({notes, handleAddnote,handleDeleteNote}) {
     return (
 
         <div>
             {notes.map((note)=>(
-            <Notes  id={note.id} text={note.text} date={note.date} handleAddnote={ handleAddnote} />
+            <Notes  id={note.id} text={note.text} date={note.date} handleAddnote={ handleAddnote} handleDeleteNote={handleDeleteNote} />
             ))}  
             <Addnote  handleAddnote={ handleAddnote}   />          
         </div>

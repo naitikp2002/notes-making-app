@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 import { Button } from 'react-bootstrap'
 
 
-function Addnote({ handleAddnote,id,text,date}) {
+function Addnote({ handleAddnote,id,text,date,handleDeleteNote}) {
 const [notetext, setnotetext] = useState("");
 
    const handlechange=(event)=>{
@@ -42,7 +42,7 @@ const [notetext, setnotetext] = useState("");
             </Form>
             </Card.Text>
             <Button variant="dark m-2"  onClick={ handlesaveclick}>Add Note</Button>
-            <Button variant="dark me-3" >Delete</Button>
+            {/* <Button variant="dark me-3" onClick={()=>handleDeleteNote(id)}>Delete</Button> */}
             </Card.Body>
             </Card>
             </div>

@@ -1,14 +1,14 @@
 import {React,useState} from 'react'
 import NoteList from './NoteList'
 import {nanoid} from 'nanoid'
-import { Button, Form, Row,Col, Stack, Container } from 'react-bootstrap';
+
 import './App.css';
-import Notes from './Notes';
+
 function Homepage() {
     const [notes, setnotes] = useState([
      {
        id: nanoid(),
-       text: 'This is an Example of Note. ',
+       text: 'This is an Example of Note. You can delete is you want',
        date: 'Date'
      },
     ]);
@@ -22,6 +22,13 @@ function Homepage() {
        const newNotes = [...notes,newNote];
        setnotes(newNotes);
     };
+
+    const deletenote=(id)=>{
+     
+        const newNote= notes.filter((notes)=>notes.id !== id);
+      setnotes(newNote);
+  
+    };
     return (
     <>
          <div class="row justify-content-between m-3">
@@ -29,20 +36,16 @@ function Homepage() {
     <h2 className='text-left'>Home Page</h2>
     </div>
     <div className="col-4">
-    <Button className='text-center' variant="dark" onClick={addnote}>New Note</Button>
+    {/* <Button className='text-center' variant="dark" onClick={addnote}>New Note</Button> */}
     </div>
   </div>
-       
         {/* <div className="example-content-main"> <h2>Home Page</h2> 
         </div>
           
         <div className="example-content-secondary"><Button variant="dark">New Note</Button>
-        </div> */}
-        
-              
-        <NoteList notes={notes} handleAddnote={addnote}/>
+        </div> */}  
+        <NoteList notes={notes} handleAddnote={addnote} handleDeleteNote={deletenote}/>
         </>
-
     //      <Container>
     //     <div className="row">
     //      <Container>
