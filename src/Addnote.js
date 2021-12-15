@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import { Button } from 'react-bootstrap'
 
+
 function Addnote({ handleAddnote,id,text,date}) {
 const [notetext, setnotetext] = useState("");
 
@@ -13,15 +14,26 @@ const [notetext, setnotetext] = useState("");
    }
   
    const handlesaveclick=()=>{
-    handleAddnote(notetext);
-    setnotetext('');
+      if(notetext.trim().length>0){
+         handleAddnote(notetext);
+      setnotetext('');
+       }
+       else{
+        
+         <div className="alert alert-warning alert-dismissible fade show" role="alert">
+       <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+         </button>
+          </div>   
+       }
  }
     return (
         <div>
              <div className='m-3'>
             <Card Card border="primary"  style={{ width: 'auto' }}>
             <Card.Body>
-            <Card.Title> { date ===" " ? 'Date' : date} </Card.Title>
+            <Card.Title> {date} </Card.Title>
             <Card.Text>
             <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">            

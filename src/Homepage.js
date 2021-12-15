@@ -8,7 +8,7 @@ function Homepage() {
     const [notes, setnotes] = useState([
      {
        id: nanoid(),
-       text: '',
+       text: 'This is an Example of Note. ',
        date: 'Date'
      },
     ]);
