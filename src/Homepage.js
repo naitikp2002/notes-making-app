@@ -22,12 +22,10 @@ function Homepage() {
        const newNotes = [...notes,newNote];
        setnotes(newNotes);
     };
-
     const deletenote=(id)=>{
-     
-        const newNote= notes.filter((notes)=>notes.id !== id);
-      setnotes(newNote);
-  
+        const newNote1 = notes.filter((note)=>note.id !==id );
+        console.log(id);
+        setnotes(newNote1);
     };
     return (
     <>

@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 import { Button } from 'react-bootstrap'
 
 
-function Addnote({ handleAddnote,id,text,date,handleDeleteNote}) {
+function Addnote({ handleAddnote,id,text,date}) {
 const [notetext, setnotetext] = useState("");
 
    const handlechange=(event)=>{

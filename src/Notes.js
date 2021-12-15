@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card'
 import { Button } from 'react-bootstrap'
 
 
-function Notes({text,id,date,handleAddnote,handleDeleteNote}) {
+function Notes({text,id,date,handleDeleteNote}) {
     
     return (
         <div className='m-3'>
@@ -19,7 +19,7 @@ function Notes({text,id,date,handleAddnote,handleDeleteNote}) {
             </Form>
             </Card.Text>
              {/* {<Button variant="dark m-2" onClick={handleAddnote} >Add Note</Button>} */}
-            <Button variant="dark me-3" onClick={()=>handleDeleteNote(id)} >Delete</Button>
+            <Button variant="dark me-3" onClick={()=>handleDeleteNote(id)} >Delete </Button>
             </Card.Body>
             </Card>
             </div>
