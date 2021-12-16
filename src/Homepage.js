@@ -5,7 +5,7 @@ import './App.css';
 
 function Homepage() {
     const [notes, setnotes] = useState([
-     {
+     {   
        id: nextId(),
        text: 'This is an Example of Note. You can delete This if you want',
        date: 'Date'
@@ -42,7 +42,7 @@ function Homepage() {
     };
     return (
     <>  
-        <h2 className='text-center'>Notes</h2>
+        <h1 className='text-center m-3 'style={ {color:"white"}}>Notes</h1>
         <NoteList notes={notes} handleAddnote={addnote} handleDeleteNote={deletenote}/>
         </>
     
