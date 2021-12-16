@@ -7,7 +7,7 @@ function Homepage() {
     const [notes, setnotes] = useState([
      {
        id: nextId(),
-       text: 'This is an Example of Note. You can delete is you want',
+       text: 'This is an Example of Note. You can delete This if you want',
        date: 'Date'
      },
     ]);
