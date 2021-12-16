@@ -1,4 +1,4 @@
-import {React,useState} from 'react'
+import {React,useState,useEffect} from 'react'
 import NoteList from './NoteList'
 import nextId from "react-id-generator";
 import './App.css';
@@ -12,6 +12,17 @@ function Homepage() {
      },
     ]);
 
+    useEffect(() => {
+      const savenote= JSON.parse(localStorage.getItem('react-notes-app-data'));
+      if(savenote)
+      {
+        setnotes(savenote);
+      }
+      localStorage.setItem('react-notes-app-data', JSON.stringify(notes))
+     }, []); 
+    useEffect(() => {
+      localStorage.setItem('react-notes-app-data', JSON.stringify(notes))
+}, [notes]);
     const addnote=(text)=>{
        const date = new Date();
        const newNote ={
